@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Verdana;
+}
+
+body {
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: hsl(217, 1%, 14%);
+  backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+.Logo {
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbar a {
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 0 0 35px;
+  transition: 0.8s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #00abf0;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background: transparent;
+  color: white;
+  margin-left: 35px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: color 1s;
+}
+
+.dropdown:hover .dropbtn {
+  color: #00abf0;
+}
+
+.dropdown-content {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: 5%;
+  width: 80px;
+  background: #081b29;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.dropdown-content a {
+  position: relative;
+  color: white;
+  padding: 5px 8px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 auto;
+  border-radius: 8px;
+  z-index: 1;
+  overflow: hidden;
+  transition: color 0.8s;
+}
+
+.dropdown-content a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #081b29;
+  z-index: -1;
+  transition: width 0.5s;
+}
+
+.dropdown-content a:hover::before {
+  width: 100%;
+}
+
+.dropdown-content a:hover {
+  color: #00abf0;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+/* Typing and blink animations */
+
+/* Style for the combined text with typing animation */
+.typed-text {
+  display: flex;
+  width: 300px;
+  height: 300px;
+  flex-direction: column;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #ededed;
+}
+
+.home {
+  height: 100vh;
+  background: url("../images/proposal-photo5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.home-content {
+  max-width: 600px;
+  color: #ededed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-content .btn-box {
+  display: flex;
+  justify-content: space-between;
+  width: 345px;
+  height: 50px;
+}
+
+.btn-box a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 100%;
+  background: #00abf0;
+  border: 2px solid #00abf0;
+  color: #081b29;
+  border-radius: 8px;
+  font-size: 19px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.btn-box a:nth-child(2) {
+  background: transparent;
+  color: #00abf0;
+}
+
+.btn-box a:nth-child(2):hover {
+  color: #081b29;
+}
+
+.btn-box a:nth-child(2)::before {
+  background: #00abf0;
+}
+
+.btn-box a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #081b29;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.btn-box a:hover::before {
+  width: 100%;
+}
+
+.btn-box a:hover {
+  color: #00abf0;
+}
+
+.home-sci {
+  position: absolute;
+  bottom: 40px;
+  width: 170px;
+  background: #081b29;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-sci a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  text-decoration: none;
+  border: 2px solid #00abf0;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #00abf0;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.home-sci a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #00abf0;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.home-sci a:hover::before {
+  width: 100%;
+}
+
+.home-sci a:hover {
+  color: #081b29;
+}
+
+.home-imgHover {
+  position: absolute;
+  top: 0;
+  left: 56.3%;
+  width: calc(100% - 56.3%);
+  height: 100%;
+  background: transparent;
+  opacity: 0;
+}
+
+.home-imgHover:hover {
+  background-image: url("../images/wedding-photo2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 1;
+  transition: opacity 3.5s ease-in-out;
+}
+
+/* TYPING ANIMATION ATTEMPT */
