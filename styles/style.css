@@ -5,7 +5,12 @@
   font-family: Arial, Verdana;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  height: 300vh;
 }
 
 .header {
@@ -40,11 +45,6 @@ body {
 .navbar a:hover,
 .navbar a.active {
   color: #00abf0;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
 }
 
 .dropdown {
@@ -120,45 +120,83 @@ body {
   display: flex;
 }
 
-/* Typing and blink animations */
-
-/* Style for the combined text with typing animation */
-.typed-text {
+/* Home section layout */
+.home {
   display: flex;
-  width: 300px;
-  height: 300px;
-  flex-direction: column;
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 1.2;
-  color: #ededed;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
 }
 
-.home {
-  height: 100vh;
-  background: url("../images/proposal-photo5.jpg");
+/* Fade-in effect keyframes */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromLeft {
+  1% {
+    transform: translate(-400%, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes slideFromRight {
+  1% {
+    transform: translate(400%, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* First container for the background image */
+.image-container {
+  flex: 1;
+  height: 100%;
+  background-image: url("../images/proposal-photo5.jpg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  padding: 0 10%;
+  opacity: 1;
+  animation:
+    fadeIn 3s ease-in-out,
+    changeImage 45s 3.5s ease-in-out infinite alternate;
 }
 
-.home-content {
-  max-width: 600px;
-  color: #ededed;
+/* Middle container for the typed-text with buttons */
+.typed-container {
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
 }
 
-.home-content .btn-box {
+.typed-text {
+  text-align: center;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #081b29;
+}
+
+.btn-box {
   display: flex;
   justify-content: space-between;
   width: 345px;
   height: 50px;
+  margin-top: 20px;
 }
 
 .btn-box a {
@@ -214,6 +252,19 @@ body {
   color: #00abf0;
 }
 
+.image-container2 {
+  flex: 1;
+  height: 100%;
+  background-image: url("../images/proposal-photo5.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 1;
+  animation:
+    fadeIn 3s ease-in-out,
+    changeImage 45s 3.5s ease-in-out infinite alternate;
+}
+
 .home-sci {
   position: absolute;
   bottom: 40px;
@@ -261,23 +312,127 @@ body {
   color: #081b29;
 }
 
-.home-imgHover {
-  position: absolute;
-  top: 0;
-  left: 56.3%;
-  width: calc(100% - 56.3%);
-  height: 100%;
-  background: transparent;
-  opacity: 0;
+/* Another slider attempt */
+
+@keyframes changeImage {
+  0% {
+    background-image: url("../images/proposal-photo5.jpg");
+  }
+  20% {
+    background-image: url("../images/wedding-photo1.jpg");
+  }
+  40% {
+    background-image: url("../images/wedding-photo2.jpg");
+  }
+  60% {
+    background-image: url("../images/wedding-photo3.jpg");
+  }
+  80% {
+    background-image: url("../images/wedding-photo4.jpg");
+  }
+  100% {
+    background-image: url("../images/wedding-photo5.jpg");
+  }
 }
 
-.home-imgHover:hover {
-  background-image: url("../images/wedding-photo2.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  opacity: 1;
-  transition: opacity 3.5s ease-in-out;
+.grid-container {
+  background: linear-gradient(45deg, blueviolet, lightgreen);
+  padding: 15px 9%;
+  padding-bottom: 100px;
+  margin: 100vh 0 0 0;
 }
 
-/* TYPING ANIMATION ATTEMPT */
+.grid-container .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 15px;
+  margin-top: 20vh;
+}
+
+.grid-container .box-container .box {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background: #fff;
+  text-align: center;
+  padding: 30px 20px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.grid-container .heading {
+  text-align: center;
+  padding-bottom: 15px;
+  color: #fff;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.grid-container .box-container .box img {
+  width: 100%;
+  height: 185px;
+  object-fit: cover;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.grid-container .box-container .box:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+  box-shadow: 0 10px 1000px rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.grid-container .box-container .box h3 {
+  color: #444;
+  font-size: 22px;
+  padding: 10px 0;
+}
+
+.grid-container .box-container .box .btn {
+  margin-top: 10px;
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  font-size: 17px;
+  border-radius: 5px;
+  padding: 8px 25px;
+}
+
+.grid-container .box-container .box .btn:hover {
+  letter-spacing: 1px;
+}
+
+.skeleton {
+  opacity: 0.7;
+  animation: skeleton-loading 1s linear infinite alternate;
+  background-color: hsl(200, 20%, 70%);
+  border-radius: 8px;
+}
+
+.skeleton-text {
+  width: 100%;
+  height: 1.5rem;
+  margin: 10px 0 10px 0;
+  border-radius: 4px;
+  background-color: hsl(200, 20%, 80%);
+}
+
+p.skeleton-text {
+  width: 90%;
+}
+
+.actual-text {
+  display: none;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 70%);
+  }
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+}
