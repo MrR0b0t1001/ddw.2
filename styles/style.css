@@ -26,6 +26,13 @@ body {
   z-index: 100;
 }
 
+.hamburger {
+  display: none; /* Hidden by default */
+  font-size: 28px; /* Size of the icon */
+  cursor: pointer; /* Pointer cursor on hover */
+  color: white; /* Color of the icon */
+}
+
 .Logo {
   font-size: 25px;
   color: white;
@@ -458,4 +465,65 @@ footer {
   color: white;
   background-color: black;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .grid-container .box-container {
+    flex-direction: column; /* Stack boxes vertically */
+    align-items: center; /* Center boxes */
+  }
+
+  .grid-container .box-container .box {
+    max-width: 100%; /* Make boxes take full width */
+    margin: 10px 0; /* Space out boxes vertically */
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  /* Style buttons for smaller screens */
+  .grid-container .box-container .box .btn {
+    padding: 12px 15px; /* Adjust padding for better fit */
+    font-size: 16px; /* Smaller font size for buttons */
+  }
+}
+
+/* Making navbar responsive */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background: black;
+  backdrop-filter: blur(10px);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.sidebar li {
+  list-style-type: none;
+  width: 100%;
+}
+
+.ham-btn {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+
+  .ham-btn {
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar {
+    width: 100%;
+  }
 }
