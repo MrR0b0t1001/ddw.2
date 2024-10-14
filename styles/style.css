@@ -168,14 +168,14 @@ body {
 .image-container {
   flex: 1;
   height: 100%;
-  background-image: url("../images/proposal-photo5.jpg");
+  background-image: url("../images/wedding-photo3.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 1;
   animation:
     fadeIn 3s ease-in-out,
-    changeImage 45s 3.5s ease-in-out infinite alternate;
+    changeImage 15s 3.5s ease-in-out infinite alternate;
 }
 
 /* Middle container for the typed-text with buttons */
@@ -188,6 +188,7 @@ body {
   background-color: white;
   padding: 30px;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .typed-text {
@@ -196,6 +197,42 @@ body {
   font-weight: 700;
   line-height: 1.2;
   color: #081b29;
+}
+
+.text {
+  position: relative;
+}
+
+.text-1 {
+}
+
+.text-2 {
+}
+
+.text-3 {
+}
+
+.text-4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-left: 3px solid hsl(60, 1%, 14%);
+  background-color: white;
+  animation: typewriter 5s steps(20) infinite;
+}
+
+@keyframes typewriter {
+  40%,
+  60% {
+    left: 100%;
+  }
+  80%,
+  100% {
+    left: 0%;
+  }
 }
 
 .btn-box {
@@ -262,14 +299,14 @@ body {
 .image-container2 {
   flex: 1;
   height: 100%;
-  background-image: url("../images/proposal-photo5.jpg");
+  background-image: url("../images/wedding-photo3.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 1;
   animation:
     fadeIn 3s ease-in-out,
-    changeImage 45s 3.5s ease-in-out infinite alternate;
+    changeImage 15s 3.5s ease-in-out infinite alternate;
 }
 
 .home-sci {
@@ -323,13 +360,13 @@ body {
 
 @keyframes changeImage {
   0% {
-    background-image: url("../images/proposal-photo5.jpg");
+    background-image: url("../images/wedding-photo3.jpg");
   }
   20% {
-    background-image: url("../images/wedding-photo1.jpg");
+    background-image: url("../images/wedding-photo4.jpg");
   }
   40% {
-    background-image: url("../images/wedding-photo2.jpg");
+    background-image: url("../images/wedding-photo5.jpg");
   }
   60% {
     background-image: url("../images/wedding-photo3.jpg");

@@ -9,12 +9,9 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="preload" as="image" href="./images/wedding-photo1.jpg" />
-    <link rel="preload" as="image" href="./images/wedding-photo2.jpg" />
-    <link rel="preload" as="image" href="./images/wedding-photo3.jpg" />
-    <link rel="preload" as="image" href="./images/wedding-photo4.jpg" />
-    <link rel="preload" as="image" href="./images/wedding-photo5.jpg" />
-    <link rel="preload" as="image" href="./images/proposal-photo5.jpg" />
+    <link rel="preload" href="./images/wedding-photo3.jpg" as="image" />
+    <link rel="preload" href="./images/wedding-photo4.jpg" as="image" />
+    <link rel="preload" href="./images/wedding-photo5.jpg" as="image" />
   </head>
   <body>
     <header class="header">
@@ -24,6 +21,7 @@
           <li onclick="closeSideBar()">
             <a href="#"
               ><svg
+                8
                 width="30px"
                 height="30px"
                 viewBox="0 0 24 24"
@@ -135,10 +133,9 @@
       <!-- Middle container for typed-text with white background and buttons -->
       <div class="typed-container">
         <div class="typed-text">
-          <span class="text text-1">Welcome</span>
-          <span class="text text-2">to your</span>
-          <span class="key-word text text-3">Dream</span>
-          <span class="text text-4">Wedding</span>
+          <div class="text text-1">Design</div>
+          <span class="text text-3">Your</span>
+          <div class="text text-4">Wedding</div>
         </div>
         <div class="btn-box">
           <a href="#grid-container">Services</a>
@@ -324,5 +321,6 @@
 
     <script src="./assets/hasLoaded.js"></script>
     <script src="./assets/hamburger.js"></script>
+    <script src="./assets/changewords.js"></script>
   </body>
 </html>
