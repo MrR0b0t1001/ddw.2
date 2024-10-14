@@ -1,0 +1,572 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Verdana;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  height: 300vh;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: hsl(217, 1%, 14%);
+  backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+}
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
+}
+.Logo {
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.navbar a {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 0 0 35px;
+  transition: 0.8s;
+}
+.navbar a:hover,
+.navbar a.active {
+  color: #00abf0;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropbtn {
+  background: transparent;
+  color: #fff;
+  margin-left: 35px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: color 1s;
+}
+.dropdown:hover .dropbtn {
+  color: #00abf0;
+}
+.dropdown-content {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: 5%;
+  width: 80px;
+  background: #081b29;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 8px;
+}
+.dropdown-content a {
+  position: relative;
+  color: #fff;
+  padding: 5px 8px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 auto;
+  border-radius: 8px;
+  z-index: 1;
+  overflow: hidden;
+  transition: color 0.8s;
+}
+.dropdown-content a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #081b29;
+  z-index: -1;
+  transition: width 0.5s;
+}
+.dropdown-content a:hover::before {
+  width: 100%;
+}
+.dropdown-content a:hover {
+  color: #00abf0;
+}
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background-color: #fff;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slideFromLeft {
+  1% {
+    transform: translate(-400%, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes slideFromRight {
+  1% {
+    transform: translate(400%, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.image-container {
+  flex: 1;
+  height: 100%;
+  background-image: url(../images/wedding-photo3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1;
+  animation:
+    fadeIn 3s ease-in-out,
+    changeImage 15s 3.5s ease-in-out infinite alternate;
+}
+.typed-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.typed-text {
+  text-align: center;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #081b29;
+}
+.text {
+  position: relative;
+}
+.text-4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-left: 3px solid hsl(60, 1%, 14%);
+  background-color: #fff;
+  animation: typewriter 5s steps(20) infinite;
+}
+@keyframes typewriter {
+  40%,
+  60% {
+    left: 100%;
+  }
+  80%,
+  100% {
+    left: 0%;
+  }
+}
+.btn-box {
+  display: flex;
+  justify-content: space-between;
+  width: 345px;
+  height: 50px;
+  margin-top: 20px;
+}
+.btn-box a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 100%;
+  background: #00abf0;
+  border: 2px solid #00abf0;
+  color: #081b29;
+  border-radius: 8px;
+  font-size: 19px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.btn-box a:nth-child(2) {
+  background: transparent;
+  color: #00abf0;
+}
+.btn-box a:nth-child(2):hover {
+  color: #081b29;
+}
+.btn-box a:nth-child(2)::before {
+  background: #00abf0;
+}
+.btn-box a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #081b29;
+  z-index: -1;
+  transition: 0.5s;
+}
+.btn-box a:hover::before {
+  width: 100%;
+}
+.btn-box a:hover {
+  color: #00abf0;
+}
+.image-container2 {
+  flex: 1;
+  height: 100%;
+  background-image: url(../images/wedding-photo3.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 1;
+  animation:
+    fadeIn 3s ease-in-out,
+    changeImage 15s 3.5s ease-in-out infinite alternate;
+}
+.home-sci {
+  position: absolute;
+  bottom: 40px;
+  width: 170px;
+  background: #081b29;
+  display: flex;
+  justify-content: space-between;
+}
+.home-sci a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  text-decoration: none;
+  border: 2px solid #00abf0;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #00abf0;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.home-sci a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #00abf0;
+  z-index: -1;
+  transition: 0.5s;
+}
+.home-sci a:hover::before {
+  width: 100%;
+}
+.home-sci a:hover {
+  color: #081b29;
+}
+@keyframes changeImage {
+  0% {
+    background-image: url(../images/wedding-photo3.jpg);
+  }
+  20% {
+    background-image: url(../images/wedding-photo4.jpg);
+  }
+  40% {
+    background-image: url(../images/wedding-photo5.jpg);
+  }
+  60% {
+    background-image: url(../images/wedding-photo3.jpg);
+  }
+  80% {
+    background-image: url(../images/wedding-photo4.jpg);
+  }
+  100% {
+    background-image: url(../images/wedding-photo5.jpg);
+  }
+}
+@media (max-width: 1200px) {
+  .typed-text {
+    font-size: 48px;
+  }
+  .btn-box {
+    width: 300px;
+    height: 50px;
+  }
+}
+@media (max-width: 992px) {
+  .home {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .image-container,
+  .image-container2 {
+    height: 50vh;
+    width: 100%;
+  }
+  .typed-container {
+    width: 90%;
+    padding: 20px;
+  }
+  .typed-text {
+    font-size: 36px;
+  }
+  .btn-box {
+    width: 280px;
+    height: 50px;
+  }
+  .btn-box a {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+}
+@media (max-width: 768px) {
+  .image-container,
+  .image-container2 {
+    height: 40vh;
+  }
+  .typed-text {
+    font-size: 28px;
+  }
+  .btn-box {
+    width: 260px;
+    height: 48px;
+  }
+  .btn-box a {
+    font-size: 17px;
+    padding: 10px 20px;
+    width: 130px;
+    transition: transform 0.3s ease;
+  }
+  .btn-box a:hover {
+    transform: scale(1.05);
+  }
+}
+@media (max-width: 576px) {
+  .typed-text {
+    font-size: 24px;
+  }
+  .btn-box {
+    width: 240px;
+    height: 45px;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .btn-box a {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 0;
+  }
+  .home-sci {
+    width: 130px;
+  }
+}
+@media (max-width: 400px) {
+  .typed-text {
+    font-size: 20px;
+  }
+  .btn-box {
+    width: 220px;
+    height: 44px;
+  }
+  .btn-box a {
+    font-size: 15px;
+    padding: 12px 0;
+  }
+}
+.grid-container {
+  background: linear-gradient(45deg, blueviolet, lightgreen);
+  padding: 15px 9%;
+  padding-bottom: 100px;
+  margin: 50vh 0 0 0;
+}
+.grid-container .box-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20vh;
+}
+.grid-container .box-container .box {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  background: #fff;
+  text-align: center;
+  padding: 30px 20px;
+  transition:
+    transform 0.6s ease,
+    box-shadow 0.6s ease,
+    opacity 0.6s ease;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+}
+.box:nth-child(odd) {
+  margin-left: 100px;
+  align-self: flex-start;
+}
+.box:nth-child(even) {
+  margin-right: 100px;
+  align-self: flex-end;
+}
+.grid-container .heading {
+  text-align: center;
+  padding-bottom: 15px;
+  color: #fff;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.grid-container .box-container .box img {
+  width: 90%;
+  height: auto;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+  padding: 10px;
+}
+.grid-container .box-container .box:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+  box-shadow: 0 10px 1000px rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  cursor: pointer;
+}
+.grid-container .box-container .box h3 {
+  color: #444;
+  font-size: 22px;
+  padding: 10px 0;
+}
+.grid-container .box-container .box .btn {
+  margin-top: 10px;
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  font-size: 17px;
+  border-radius: 5px;
+  padding: 8px 25px;
+}
+.grid-container .box-container .box .btn:hover {
+  letter-spacing: 1px;
+}
+.skeleton {
+  opacity: 0.7;
+  animation: skeleton-loading 1s linear infinite alternate;
+  background-color: hsl(200, 20%, 70%);
+  border-radius: 8px;
+}
+.skeleton-text {
+  width: 100%;
+  height: 1.5rem;
+  margin: 10px 0 10px 0;
+  border-radius: 4px;
+  background-color: hsl(200, 20%, 80%);
+}
+p.skeleton-text {
+  width: 90%;
+}
+.actual-text {
+  display: none;
+}
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 70%);
+  }
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+}
+footer {
+  height: 400px;
+  width: 100%;
+  color: #fff;
+  background-color: #000;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .grid-container .box-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .grid-container .box-container .box {
+    max-width: 100%;
+    margin: 10px 0;
+    padding: 20px;
+  }
+  .grid-container .box-container .box .btn {
+    padding: 12px 15px;
+    font-size: 16px;
+  }
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background: #000;
+  backdrop-filter: blur(10px);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 15px;
+}
+.sidebar li {
+  list-style-type: none;
+  width: 100%;
+}
+.ham-btn {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+  .ham-btn {
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 400px) {
+  .sidebar {
+    width: 100%;
+  }
+}
