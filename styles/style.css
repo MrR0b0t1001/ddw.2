@@ -127,6 +127,48 @@ body {
   display: flex;
 }
 
+/* Making navbar responsive */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background: black;
+  backdrop-filter: blur(10px);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.sidebar li {
+  list-style-type: none;
+  width: 100%;
+}
+
+.ham-btn {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+
+  .ham-btn {
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+
 /* Home section layout */
 .home {
   display: flex;
@@ -633,47 +675,5 @@ footer {
   .grid-container .box-container .box .btn {
     padding: 12px 15px; /* Adjust padding for better fit */
     font-size: 16px; /* Smaller font size for buttons */
-  }
-}
-
-/* Making navbar responsive */
-.sidebar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 250px;
-  z-index: 999;
-  background: black;
-  backdrop-filter: blur(10px);
-  display: none;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 15px;
-}
-
-.sidebar li {
-  list-style-type: none;
-  width: 100%;
-}
-
-.ham-btn {
-  display: none;
-}
-
-@media screen and (max-width: 800px) {
-  .hideOnMobile {
-    display: none;
-  }
-
-  .ham-btn {
-    display: inline-block;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .sidebar {
-    width: 100%;
   }
 }
