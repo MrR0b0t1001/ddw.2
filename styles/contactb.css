@@ -1,0 +1,391 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Verdana;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url("../images/venue.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Embedding navbar */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: hsl(217, 1%, 14%);
+  backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+.hamburger {
+  display: none; /* Hidden by default */
+  font-size: 28px; /* Size of the icon */
+  cursor: pointer; /* Pointer cursor on hover */
+  color: white; /* Color of the icon */
+}
+
+.Logo {
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbar a {
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 0 0 35px;
+  transition: 0.8s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #00abf0;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background: transparent;
+  color: white;
+  margin-left: 35px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: color 1s;
+}
+
+.dropdown:hover .dropbtn {
+  color: #00abf0;
+}
+
+.dropdown-content {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: 5%;
+  width: 80px;
+  background: #081b29;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.dropdown-content a {
+  position: relative;
+  color: white;
+  padding: 5px 8px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 auto;
+  border-radius: 8px;
+  z-index: 1;
+  overflow: hidden;
+  transition: color 0.8s;
+}
+
+.dropdown-content a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #081b29;
+  z-index: -1;
+  transition: width 0.5s;
+}
+
+.dropdown-content a:hover::before {
+  width: 100%;
+}
+
+.dropdown-content a:hover {
+  color: #00abf0;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+/* Making navbar responsive */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background: black;
+  backdrop-filter: blur(10px);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.sidebar li {
+  list-style-type: none;
+  width: 100%;
+}
+
+.ham-btn {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+
+  .ham-btn {
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  width: 100%;
+  height: 500px;
+  background-color: black;
+  max-width: 820px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  z-index: 1001;
+}
+
+.contact {
+}
+
+.submit-form {
+  background: black;
+}
+
+.first-text {
+  color: black;
+  padding: 20px 0 0 20px;
+  font-size: 30px;
+}
+
+.image {
+  height: 320px;
+  width: 320px;
+}
+
+.home-sci {
+  display: flex;
+  position: absolute;
+  margin-left: 10px;
+}
+
+.home-sci a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  text-decoration: none;
+  border: 2px solid black;
+  border-radius: 50%;
+  font-size: 20px;
+  color: black;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+  margin: 10px 0 0 10px;
+}
+
+.home-sci a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: black;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.home-sci a:hover::before {
+  width: 100%;
+}
+
+.home-sci a:hover {
+  color: white;
+}
+
+.second-text {
+  font-weight: 600;
+}
+
+/* Second part of the container */
+
+.third-text {
+  font-size: 25px;
+  position: relative;
+  top: 20px;
+  left: 20px;
+  padding-top: 10px;
+  color: white;
+}
+
+form {
+  padding: 0 50px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.input-box {
+  height: 40px;
+  width: 80%;
+  margin: 30px 0;
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 20px;
+  outline: none;
+  padding-left: 10px;
+  color: white;
+  font-size: 16px;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  padding-left: 10px;
+  transform: translateY(-50%);
+  font-weight: 500;
+  color: white;
+  transition: 0.3s;
+}
+
+.input-box .input:focus ~ label,
+.input-box .input:valid ~ label {
+  top: -1px;
+  left: 10px;
+  background: black;
+  font-weight: 500;
+  font-size: 12px;
+  padding: 5px;
+}
+
+textarea.input {
+  resize: none;
+  min-height: 150px;
+  overflow: auto;
+}
+
+textarea {
+  padding-top: 15px;
+}
+
+.btn {
+  position: relative;
+  top: 100px;
+  background: none;
+  border: 2px solid white;
+  border-radius: 20px;
+  height: 45px;
+  width: 30%;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background: white;
+  color: black;
+}
+
+@media screen and (max-width: 850px) {
+  .item {
+    grid-template-columns: 1fr;
+  }
+  .contact {
+    display: none;
+  }
+  .text {
+    font-size: 40px;
+    text-align: center;
+  }
+  .btn {
+    width: 25%;
+    height: 40px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .item {
+    grid-template-columns: 1fr;
+  }
+  .contact {
+    display: none;
+  }
+  .text {
+    font-size: 20px;
+    text-align: center;
+  }
+  .btn {
+    width: 20%;
+    height: 40px;
+    font-size: 12px;
+  }
+}

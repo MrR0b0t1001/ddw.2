@@ -3,15 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Home</title>
-    <link href="./styles/style.css" rel="stylesheet" />
+    <title></title>
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="preload" href="./images/wedding-photo3.jpg" as="image" />
-    <link rel="preload" href="./images/wedding-photo4.jpg" as="image" />
-    <link rel="preload" href="./images/wedding-photo5.jpg" as="image" />
+
+    <link href="../styles/contactb.css" rel="stylesheet" />
   </head>
   <body>
     <header class="header">
@@ -44,10 +42,10 @@
             </a>
           </li>
 
-          <li><a href="./index.html" class="active">Home</a></li>
+          <li><a href="../index.html" class="active">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Services</a></li>
-          <li><a href="./subpages/contactb.html">Contact Us</a></li>
+          <li><a href="./subpages/contact.html">Contact Us</a></li>
           <div class="dropdown">
             <button class="dropbtn">Social Media</button>
             <div class="dropdown-content">
@@ -59,10 +57,10 @@
           </div>
         </ul>
 
-        <a href="#" class="active hideOnMobile">Home</a>
+        <a href="../index.html" class="hideOnMobile">Home</a>
         <a href="#" class="hideOnMobile">About</a>
         <a href="#" class="hideOnMobile">Services</a>
-        <a href="./subpages/contactb.html" class="hideOnMobile">Contact Us</a>
+        <a href="#" class="active hideOnMobile">Contact Us</a>
         <div class="dropdown hideOnMobile">
           <button class="dropbtn">Social Media</button>
           <div class="dropdown-content">
@@ -126,200 +124,53 @@
       </nav>
     </header>
 
-    <section class="home">
-      <!-- First div for the current background image -->
-      <div class="image-container"></div>
-      <!-- Middle container for typed-text with white background and buttons -->
-      <div class="typed-container">
-        <div class="typed-text">
-          <div class="text text-1">Design</div>
-          <span class="text text-3">Your</span>
-          <div class="text text-4">Wedding</div>
+    <!-- Start of contact.html-->
+
+    <div class="container">
+      <div class="item">
+        <div class="contact">
+          <div class="first-text">Let's get in touch</div>
+          <img src="../images/logo1.jpg" alt="" class="image" />
+          <div class="social-links">
+            <span class="second-text">Connect with us: </span>
+            <div class="home-sci">
+              <a href="#"><i class="bx bxl-facebook"></i></a>
+              <a href="#"><i class="bx bxl-twitter"></i></a>
+              <a href="#"><i class="bx bxl-instagram"></i></a>
+              <a href="#"><i class="bx bxl-tiktok"></i></a>
+            </div>
+          </div>
         </div>
-        <div class="btn-box">
-          <a href="#grid-container">Services</a>
-          <a href="./index.html">Contact us</a>
-        </div>
-      </div>
+        <div class="submit-form">
+          <h4 class="third-text">Contact Us</h4>
+          <form action="">
+            <div class="input-box">
+              <input type="text" class="input" required />
+              <label>Name</label>
+            </div>
 
-      <!-- Last div for the hover image -->
-      <div class="image-container2"></div>
-      <!--
-      <div class="home-sci">
-        <a href="#"><i class="bx bxl-facebook"></i></a>
-        <a href="#"><i class="bx bxl-twitter"></i></a>
-        <a href="#"><i class="bx bxl-instagram"></i></a>
-        <a href="#"><i class="bx bxl-tiktok"></i></a>
-      </div>
-      -->
-    </section>
-    <div class="grid-container" id="grid-container">
-      <h1 class="heading" id="box-container">Our Services</h1>
+            <div class="input-box">
+              <input type="email" class="input" required />
+              <label>Email</label>
+            </div>
 
-      <div class="box-container">
-        <div class="box box4">
-          <img src="./images/wedding-photo5.jpg" alt="" class="skeleton" />
-          <h3 class="skeleton skeleton-text"></h3>
-          <p class="skeleton skeleton-text"></p>
+            <div class="input-box">
+              <input type="tel" class="input" required />
+              <label>Phone</label>
+            </div>
 
-          <h3 class="actual-text">HTML</h3>
-          <p class="actual-text">
-            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-            cillum sint consectetur cupidatat.
-          </p>
-          <a href="#" class="actual-text btn">read more</a>
-        </div>
-
-        <div class="box box4">
-          <img src="./images/wedding-photo5.jpg" alt="" class="skeleton" />
-          <h3 class="skeleton skeleton-text"></h3>
-          <p class="skeleton skeleton-text"></p>
-
-          <h3 class="actual-text">HTML</h3>
-          <p class="actual-text">
-            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-            cillum sint consectetur cupidatat.
-          </p>
-          <a href="#" class="actual-text btn">read more</a>
-        </div>
-
-        <div class="box box4">
-          <img src="./images/wedding-photo5.jpg" alt="" class="skeleton" />
-          <h3 class="skeleton skeleton-text"></h3>
-          <p class="skeleton skeleton-text"></p>
-
-          <h3 class="actual-text">HTML</h3>
-          <p class="actual-text">
-            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-            cillum sint consectetur cupidatat.
-          </p>
-          <a href="#" class="actual-text btn">read more</a>
-        </div>
-
-        <div class="box box4">
-          <img src="./images/wedding-photo5.jpg" alt="" class="skeleton" />
-          <h3 class="skeleton skeleton-text"></h3>
-          <p class="skeleton skeleton-text"></p>
-
-          <h3 class="actual-text">HTML</h3>
-          <p class="actual-text">
-            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-            cillum sint consectetur cupidatat.
-          </p>
-          <a href="#" class="actual-text btn">read more</a>
-        </div>
-
-        <div class="box box4">
-          <img src="./images/wedding-photo5.jpg" alt="" class="skeleton" />
-          <h3 class="skeleton skeleton-text"></h3>
-          <p class="skeleton skeleton-text"></p>
-
-          <h3 class="actual-text">HTML</h3>
-          <p class="actual-text">
-            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-            cillum sint consectetur cupidatat.
-          </p>
-          <a href="#" class="actual-text btn">read more</a>
-        </div>
-
-        <div class="box box4">
-          <img src="./images/wedding-photo5.jpg" alt="" class="skeleton" />
-          <h3 class="skeleton skeleton-text"></h3>
-          <p class="skeleton skeleton-text"></p>
-
-          <h3 class="actual-text">HTML</h3>
-          <p class="actual-text">
-            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-            cillum sint consectetur cupidatat.
-          </p>
-          <a href="#" class="actual-text btn">read more</a>
-        </div>
-        <div class="box box4">
-          <img src="./images/wedding-photo5.jpg" alt="" class="skeleton" />
-          <h3 class="skeleton skeleton-text"></h3>
-          <p class="skeleton skeleton-text"></p>
-
-          <h3 class="actual-text">HTML</h3>
-          <p class="actual-text">
-            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-            cillum sint consectetur cupidatat.
-          </p>
-          <a href="#" class="actual-text btn">read more</a>
-        </div>
-
-        <div class="box box4">
-          <img src="./images/wedding-photo5.jpg" alt="" class="skeleton" />
-          <h3 class="skeleton skeleton-text"></h3>
-          <p class="skeleton skeleton-text"></p>
-
-          <h3 class="actual-text">HTML</h3>
-          <p class="actual-text">
-            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-            cillum sint consectetur cupidatat.
-          </p>
-          <a href="#" class="actual-text btn">read more</a>
-        </div>
-
-        <div class="box box4">
-          <img src="./images/wedding-photo5.jpg" alt="" class="skeleton" />
-          <h3 class="skeleton skeleton-text"></h3>
-          <p class="skeleton skeleton-text"></p>
-
-          <h3 class="actual-text">HTML</h3>
-          <p class="actual-text">
-            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-            cillum sint consectetur cupidatat.
-          </p>
-          <a href="#" class="actual-text btn">read more</a>
-        </div>
-
-        <div class="box box4">
-          <img src="./images/wedding-photo5.jpg" alt="" class="skeleton" />
-          <h3 class="skeleton skeleton-text"></h3>
-          <p class="skeleton skeleton-text"></p>
-
-          <h3 class="actual-text">HTML</h3>
-          <p class="actual-text">
-            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-            cillum sint consectetur cupidatat.
-          </p>
-          <a href="#" class="actual-text btn">read more</a>
-        </div>
-
-        <div class="box box4">
-          <img src="./images/wedding-photo5.jpg" alt="" class="skeleton" />
-          <h3 class="skeleton skeleton-text"></h3>
-          <p class="skeleton skeleton-text"></p>
-
-          <h3 class="actual-text">HTML</h3>
-          <p class="actual-text">
-            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-            cillum sint consectetur cupidatat.
-          </p>
-          <a href="#" class="actual-text btn">read more</a>
-        </div>
-
-        <div class="box box4">
-          <img src="./images/wedding-photo5.jpg" alt="" class="skeleton" />
-          <h3 class="skeleton skeleton-text"></h3>
-          <p class="skeleton skeleton-text"></p>
-
-          <h3 class="actual-text">HTML</h3>
-          <p class="actual-text">
-            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-            cillum sint consectetur cupidatat.
-          </p>
-          <a href="#" class="actual-text btn">read more</a>
+            <div class="input-box">
+              <textarea class="input" required></textarea>
+              <label>Message</label>
+            </div>
+            <div class="button-container">
+              <button type="submit" class="btn">Submit</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
 
-    <footer>
-      <h1>This is the footer</h1>
-    </footer>
-
-    <script src="./assets/hasLoaded.js"></script>
-    <script src="./assets/hamburger.js"></script>
-    <script src="./assets/changewords.js"></script>
+    <script src="../assets/hamburger.js"></script>
   </body>
 </html>
