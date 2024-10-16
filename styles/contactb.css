@@ -357,10 +357,10 @@ textarea {
 
 @media screen and (max-width: 680px) {
   .item {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(autofit, minmax(300px, 1fr));
   }
   .contact {
-    display: none;
+    display: block;
   }
   .text {
     font-size: 40px;
@@ -373,7 +373,7 @@ textarea {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 699px) {
   .item {
     grid-template-columns: 1fr;
   }
