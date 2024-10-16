@@ -195,7 +195,7 @@ body {
   overflow: hidden;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  z-index: 1001;
+  z-index: 999;
 }
 
 .contact {
@@ -354,7 +354,7 @@ textarea {
   color: black;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 680px) {
   .item {
     grid-template-columns: 1fr;
   }
