@@ -376,6 +376,7 @@ textarea {
 @media screen and (max-width: 699px) {
   .item {
     grid-template-columns: 1fr;
+    max-width: 80%;
   }
   .contact {
     display: none;
