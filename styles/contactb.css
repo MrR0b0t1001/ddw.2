@@ -24,11 +24,10 @@ body {
   left: 0;
   width: 100%;
   padding: 20px 10%;
-  background: hsl(217, 1%, 14%);
-  backdrop-filter: blur(20px);
   display: flex;
   justify-content: space-between;
   z-index: 100;
+  backdrop-filter: blur(20px);
 }
 
 .hamburger {
@@ -40,23 +39,38 @@ body {
 
 .Logo {
   font-size: 25px;
-  color: white;
+  color: black;
   text-decoration: none;
   font-weight: 600;
 }
 
 .navbar a {
+  position: relative;
   font-size: 18px;
-  color: white;
+  color: hsl(0, 0%, 10%);
   text-decoration: none;
   font-weight: 500;
   margin: 0 0 0 35px;
-  transition: 0.8s;
+  transition: color 0.5s;
 }
 
-.navbar a:hover,
-.navbar a.active {
-  color: #00abf0;
+.navbar a:hover {
+  color: hsl(0, 0%, 2%);
+}
+
+.navbar a::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(45deg, white, black);
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  transition: 0.5s;
+}
+
+.navbar a:hover::before {
+  width: 100%;
 }
 
 .dropdown {
@@ -66,7 +80,7 @@ body {
 
 .dropbtn {
   background: transparent;
-  color: white;
+  color: black;
   margin-left: 35px;
   font-size: 18px;
   border: none;
@@ -75,7 +89,7 @@ body {
 }
 
 .dropdown:hover .dropbtn {
-  color: #00abf0;
+  color: black;
 }
 
 .dropdown-content {
@@ -85,7 +99,7 @@ body {
   top: 100%;
   right: 5%;
   width: 80px;
-  background: #081b29;
+  background: black;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   border-radius: 8px;
@@ -115,7 +129,7 @@ body {
   left: 0;
   width: 0;
   height: 100%;
-  background: #081b29;
+  background: white;
   z-index: -1;
   transition: width 0.5s;
 }
@@ -125,7 +139,7 @@ body {
 }
 
 .dropdown-content a:hover {
-  color: #00abf0;
+  color: black;
 }
 
 .dropdown:hover .dropdown-content {
@@ -386,8 +400,8 @@ textarea {
     text-align: center;
   }
   .btn {
-    width: 20%;
-    height: 40px;
+    width: 30%;
+    height: 30px;
     font-size: 12px;
   }
 }

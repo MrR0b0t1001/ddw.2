@@ -19,11 +19,11 @@ body {
   left: 0;
   width: 100%;
   padding: 20px 10%;
-  background: hsl(217, 1%, 14%);
-  backdrop-filter: blur(20px);
   display: flex;
+  backdrop-filter: blur(10px);
   justify-content: space-between;
   z-index: 100;
+  animation: bounceIn 3s ease-in-out;
 }
 
 .hamburger {
@@ -35,23 +35,38 @@ body {
 
 .Logo {
   font-size: 25px;
-  color: white;
+  color: black;
   text-decoration: none;
   font-weight: 600;
 }
 
 .navbar a {
+  position: relative;
   font-size: 18px;
-  color: white;
+  color: hsl(0, 0%, 10%);
   text-decoration: none;
   font-weight: 500;
   margin: 0 0 0 35px;
-  transition: 0.8s;
+  transition: color 0.5s;
 }
 
-.navbar a:hover,
-.navbar a.active {
-  color: #00abf0;
+.navbar a:hover {
+  color: hsl(0, 0%, 2%);
+}
+
+.navbar a::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(45deg, white, black);
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  transition: 0.5s;
+}
+
+.navbar a:hover::before {
+  width: 100%;
 }
 
 .dropdown {
@@ -61,7 +76,7 @@ body {
 
 .dropbtn {
   background: transparent;
-  color: white;
+  color: black;
   margin-left: 35px;
   font-size: 18px;
   border: none;
@@ -70,7 +85,7 @@ body {
 }
 
 .dropdown:hover .dropbtn {
-  color: #00abf0;
+  color: white;
 }
 
 .dropdown-content {
@@ -80,7 +95,7 @@ body {
   top: 100%;
   right: 5%;
   width: 80px;
-  background: #081b29;
+  background: black;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   border-radius: 8px;
@@ -110,7 +125,7 @@ body {
   left: 0;
   width: 0;
   height: 100%;
-  background: #081b29;
+  background: white;
   z-index: -1;
   transition: width 0.5s;
 }
@@ -120,7 +135,7 @@ body {
 }
 
 .dropdown-content a:hover {
-  color: #00abf0;
+  color: black;
 }
 
 .dropdown:hover .dropdown-content {
@@ -135,7 +150,6 @@ body {
   height: 100vh;
   width: 250px;
   z-index: 999;
-  background: black;
   backdrop-filter: blur(10px);
   display: none;
   flex-direction: column;
@@ -188,21 +202,42 @@ body {
   }
 }
 
-@keyframes slideFromLeft {
-  1% {
-    transform: translate(-400%, 0);
+@keyframes bounceIn {
+  0% {
+    transform: translateY(-100%); /* Start above the screen */
+    opacity: 0; /* Start hidden */
+  }
+  30% {
+    transform: translateY(30px); /* Move down a bit */
+    opacity: 1; /* Fully visible */
+  }
+  50% {
+    transform: translateY(-15px); /* Move up a bit */
+  }
+  70% {
+    transform: translateY(10px); /* Move down slightly */
   }
   100% {
-    transform: translate(0, 0);
+    transform: translateY(0); /* Settle in place */
   }
 }
 
-@keyframes slideFromRight {
-  1% {
-    transform: translate(400%, 0);
+@keyframes waveReveal {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  30% {
+    transform: translateY(10px);
+    opacity: 0.5;
+  }
+  60% {
+    transform: translateY(-5px);
+    opacity: 1;
   }
   100% {
-    transform: translate(0, 0);
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -292,13 +327,13 @@ body {
   align-items: center;
   width: 150px;
   height: 100%;
-  background: #00abf0;
-  border: 2px solid #00abf0;
-  color: #081b29;
+  background: hsl(0, 1%, 11%);
+  border: 2px solid black;
+  color: white;
   border-radius: 8px;
   font-size: 19px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.5px;
   z-index: 1;
   overflow: hidden;
@@ -307,15 +342,15 @@ body {
 
 .btn-box a:nth-child(2) {
   background: transparent;
-  color: #00abf0;
+  color: black;
 }
 
 .btn-box a:nth-child(2):hover {
-  color: #081b29;
+  color: white;
 }
 
 .btn-box a:nth-child(2)::before {
-  background: #00abf0;
+  background: black;
 }
 
 .btn-box a::before {
@@ -325,7 +360,7 @@ body {
   left: 0;
   width: 0;
   height: 100%;
-  background: #081b29;
+  background: white;
   z-index: -1;
   transition: 0.5s;
 }
@@ -335,7 +370,7 @@ body {
 }
 
 .btn-box a:hover {
-  color: #00abf0;
+  color: hsl(0, 1%, 11%);
 }
 
 .image-container2 {
@@ -355,7 +390,7 @@ body {
   position: absolute;
   bottom: 40px;
   width: 170px;
-  background: #081b29;
+  background: black;
   display: flex;
   justify-content: space-between;
 }
@@ -369,10 +404,10 @@ body {
   height: 40px;
   background: transparent;
   text-decoration: none;
-  border: 2px solid #00abf0;
+  border: 2px solid black;
   border-radius: 50%;
   font-size: 20px;
-  color: #00abf0;
+  color: black;
   z-index: 1;
   overflow: hidden;
   transition: 0.5s;
@@ -385,7 +420,7 @@ body {
   left: 0;
   width: 0;
   height: 100%;
-  background: #00abf0;
+  background: black;
   z-index: -1;
   transition: 0.5s;
 }
@@ -395,7 +430,7 @@ body {
 }
 
 .home-sci a:hover {
-  color: #081b29;
+  color: white;
 }
 
 /* Another slider attempt */
@@ -535,44 +570,30 @@ body {
 /* END OF HERO SECTION */
 
 .grid-container {
-  background: linear-gradient(45deg, blueviolet, lightgreen);
+  background: linear-gradient(180deg, black, white);
   padding: 15px 9%;
   padding-bottom: 100px;
-  margin: 50vh 0 0 0;
+  margin: 100vh 0 0 0;
 }
 
 .grid-container .box-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 15px;
   margin-top: 20vh;
 }
 
 .grid-container .box-container .box {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 50px;
+  border-radius: 5px;
   background: #fff;
   text-align: center;
   padding: 30px 20px;
   transition:
-    transform 0.6s ease,
-    box-shadow 0.6s ease,
-    opacity 0.6s ease;
-  width: 100%;
-  max-width: 350px;
-  height: auto;
-}
-
-.box:nth-child(odd) {
-  margin-left: 100px;
-  align-self: flex-start;
-}
-
-.box:nth-child(even) {
-  margin-right: 100px;
-  align-self: flex-end;
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    opacity 0.3s ease;
 }
 
 .grid-container .heading {
@@ -583,9 +604,8 @@ body {
 }
 
 .grid-container .box-container .box img {
-  width: 90%;
-  height: auto;
-  max-height: 350px;
+  width: 100%;
+  height: 185px;
   object-fit: cover;
   border-radius: 15px;
   padding: 10px;
@@ -594,7 +614,7 @@ body {
 .grid-container .box-container .box:hover {
   transform: scale(1.2);
   opacity: 0.8;
-  box-shadow: 0 10px 1000px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.8);
   z-index: 2;
   cursor: pointer;
 }
