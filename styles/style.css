@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  height: 300vh;
+  height: 200vh;
 }
 
 .header {
@@ -591,7 +591,6 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(270px, 1fr));
   gap: 15px;
-  margin-top: 20vh;
 }
 
 .grid-container .box-container .box {
@@ -608,14 +607,14 @@ body {
 
 .grid-container .heading {
   text-align: center;
-  padding-bottom: 15px;
+  padding-bottom: 100px;
   color: #fff;
   text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .grid-container .box-container .box img {
   width: 100%;
-  height: 185px;
+  height: 200px;
   object-fit: cover;
   border-radius: 15px;
   padding: 10px;
@@ -636,17 +635,39 @@ body {
 }
 
 .grid-container .box-container .box .btn {
-  margin-top: 10px;
-  display: inline-block;
-  background: #333;
-  color: #fff;
-  font-size: 17px;
-  border-radius: 5px;
+  position: relative;
+  display: inline-flex;
   padding: 8px 25px;
+  background: hsl(0, 1%, 11%);
+  border: 1px solid black;
+  color: white;
+  border-radius: 8px;
+  font-size: 17px;
+  text-decoration: none;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.grid-container .box-container .box a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: white;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.grid-container .box-container .box a:hover::before {
+  width: 100%;
 }
 
 .grid-container .box-container .box .btn:hover {
-  letter-spacing: 1px;
+  font-weight: 700;
+  color: black;
 }
 
 .skeleton {
