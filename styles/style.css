@@ -6,8 +6,8 @@
 }
 
 :root {
-  --col-off-black: hsl(40, 5%, 8%);
-  --col-off-white: hsl(40 100% 96%);
+  --col-off-black: hsl(30, 10%, 10%);
+  --col-off-white: hsl(18, 100%, 97%);
   --col-gray: rgba(150, 150, 150, 1);
   --col-off-pink: hsl(313, 88%, 92%);
   --accent-cols: rgba(255, 228, 230, 1);
@@ -18,6 +18,7 @@ html {
 }
 
 body {
+  background: var(--col-off-black);
   height: 200vh;
 }
 
@@ -29,8 +30,8 @@ body {
   padding: 20px 10%;
   display: flex;
   flex-grow: 1;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   justify-content: space-between;
   z-index: 100;
   animation: bounceIn 3s ease-in-out;
@@ -49,7 +50,7 @@ body {
 
 .Logo {
   font-size: 25px;
-  color: var(--col-off-black);
+  color: var(--col-off-white);
   text-decoration: none;
   font-weight: 600;
   animation: slideLeft 3s ease-in-out;
@@ -70,7 +71,7 @@ body {
 .navbar a {
   position: relative;
   font-size: 18px;
-  color: rgba(0, 0, 0, 1);
+  color: var(--col-off-white);
   text-decoration: none;
   font-weight: 500;
   margin: 0 0 0 35px;
@@ -84,7 +85,11 @@ body {
 .navbar a::before {
   content: "";
   position: absolute;
-  background: linear-gradient(45deg, var(--col-off-white), black);
+  background: linear-gradient(
+    45deg,
+    var(--col-off-white),
+    var(--col-off-black)
+  );
   top: 100%;
   left: 0;
   width: 0;
@@ -103,7 +108,7 @@ body {
 
 .dropbtn {
   background: transparent;
-  color: var(--col-off-black);
+  color: var(--col-off-white);
   margin-left: 35px;
   font-size: 18px;
   border: none;
@@ -122,7 +127,7 @@ body {
   top: 100%;
   right: 5%;
   width: 80px;
-  background: black;
+  background: var(--col-off-white);
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   border-radius: 8px;
@@ -130,7 +135,7 @@ body {
 
 .dropdown-content a {
   position: relative;
-  color: var(--col-off-white);
+  color: var(--col-off-black);
   padding: 5px 8px;
   text-decoration: none;
   display: flex;
@@ -152,7 +157,7 @@ body {
   left: 0;
   width: 0;
   height: 100%;
-  background: var(--col-off-white);
+  background: var(--col-off-black);
   z-index: -1;
   transition: width 0.5s;
 }
@@ -162,7 +167,7 @@ body {
 }
 
 .dropdown-content a:hover {
-  color: var(--col-off-black);
+  color: var(--col-off-white);
 }
 
 .dropdown:hover .dropdown-content {
@@ -198,7 +203,7 @@ body {
   display: none;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 983px) {
   .hideOnMobile {
     display: none;
   }
@@ -220,7 +225,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 100vh;
-  background-color: var(--col-off-white);
+  background-color: var(--col-off-black);
 }
 
 /* Fade-in effect keyframes */
@@ -253,25 +258,6 @@ body {
   }
 }
 
-@keyframes waveReveal {
-  0% {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-  30% {
-    transform: translateY(10px);
-    opacity: 0.5;
-  }
-  60% {
-    transform: translateY(-5px);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 /* First container for the background image */
 .image-container {
   flex: 1;
@@ -282,8 +268,8 @@ body {
   background-size: cover;
   opacity: 1;
   animation:
-    fadeIn 3s ease-in-out,
-    changeImage 15s 3.5s ease-in-out infinite alternate;
+    fadeIn 1.5s ease-in-out,
+    changeImage 25s 2s ease-in-out infinite alternate;
 }
 
 /* Middle container for the typed-text with buttons */
@@ -293,7 +279,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--col-off-white);
+  background-color: var(--col-off-black);
   padding: 30px;
   border-radius: 10px;
   overflow: hidden;
@@ -304,6 +290,7 @@ body {
   font-size: 56px;
   font-weight: 700;
   line-height: 1.2;
+  color: var(--col-off-white);
 }
 
 .text {
@@ -326,8 +313,8 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  border-left: 3px solid hsl(60, 1%, 14%);
-  background-color: var(--col-off-white);
+  border-left: 3px solid var(--col-off-white);
+  background-color: var(--col-off-black);
   animation: typewriter 5s steps(20) infinite;
 }
 
@@ -357,9 +344,9 @@ body {
   align-items: center;
   width: 150px;
   height: 100%;
-  background: hsl(0, 1%, 11%);
-  border: 2px solid black;
-  color: var(--col-off-white);
+  background: var(--col-off-white);
+  border: 2px solid var(--col-off-white);
+  color: var(--col-off-black);
   border-radius: 8px;
   font-size: 19px;
   text-decoration: none;
@@ -372,15 +359,15 @@ body {
 
 .btn-box a:nth-child(2) {
   background: transparent;
-  color: var(--col-off-black);
-}
-
-.btn-box a:nth-child(2):hover {
   color: var(--col-off-white);
 }
 
+.btn-box a:nth-child(2):hover {
+  color: var(--col-off-black);
+}
+
 .btn-box a:nth-child(2)::before {
-  background: black;
+  background: var(--col-off-white);
 }
 
 .btn-box a::before {
@@ -390,7 +377,7 @@ body {
   left: 0;
   width: 0;
   height: 100%;
-  background: var(--col-off-white);
+  background: var(--col-off-black);
   z-index: -1;
   transition: 0.5s;
 }
@@ -400,7 +387,7 @@ body {
 }
 
 .btn-box a:hover {
-  color: hsl(0, 1%, 11%);
+  color: var(--col-off-white);
 }
 
 .image-container2 {
@@ -412,58 +399,9 @@ body {
   background-repeat: no-repeat;
   opacity: 1;
   animation:
-    fadeIn 3s ease-in-out,
-    changeImage 15s 3.5s ease-in-out infinite alternate;
+    fadeIn 1.5s ease-in-out,
+    changeImage 25s 2s ease-in-out infinite alternate;
 }
-
-.home-sci {
-  position: absolute;
-  bottom: 40px;
-  width: 170px;
-  background: black;
-  display: flex;
-  justify-content: space-between;
-}
-
-.home-sci a {
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  background: transparent;
-  text-decoration: none;
-  border: 2px solid black;
-  border-radius: 50%;
-  font-size: 20px;
-  color: var(--col-off-black);
-  z-index: 1;
-  overflow: hidden;
-  transition: 0.5s;
-}
-
-.home-sci a::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: black;
-  z-index: -1;
-  transition: 0.5s;
-}
-
-.home-sci a:hover::before {
-  width: 100%;
-}
-
-.home-sci a:hover {
-  color: var(--col-off-white);
-}
-
-/* Another slider attempt */
 
 @keyframes changeImage {
   0% {
@@ -493,6 +431,8 @@ body {
   }
 
   .btn-box {
+    display: flex;
+    gap: 10px;
     width: 300px;
     height: 50px;
   }
@@ -527,7 +467,7 @@ body {
 
   .btn-box a {
     font-size: 18px;
-    padding: 10px 20px;
+    padding: 10px 18px;
   }
 }
 
@@ -548,7 +488,7 @@ body {
 
   .btn-box a {
     font-size: 17px;
-    padding: 10px 20px;
+    padding: 10px 15px;
     width: 130px;
     transition: transform 0.3s ease;
   }
@@ -564,10 +504,11 @@ body {
   }
 
   .btn-box {
-    width: 240px;
-    height: 45px;
+    width: 120px;
+    height: 30px;
     flex-direction: column;
     gap: 15px;
+    border-radius: 20%;
   }
 
   .btn-box a {
@@ -583,17 +524,25 @@ body {
 
 @media (max-width: 400px) {
   .typed-text {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .btn-box {
-    width: 220px;
-    height: 44px;
+    width: 100px;
+    height: 35px;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 20%;
   }
 
   .btn-box a {
-    font-size: 15px;
+    width: 100%;
+    font-size: 16px;
     padding: 12px 0;
+  }
+
+  .home-sci {
+    width: 130px;
   }
 }
 
