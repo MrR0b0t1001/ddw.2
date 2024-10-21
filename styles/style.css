@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  background: var(--col-off-black);
+  background: var(--col-off-white);
   height: 200vh;
 }
 
@@ -31,7 +31,7 @@ body {
   display: flex;
   flex-grow: 1;
   justify-content: space-between;
-  animation: bounceIn 3s ease-in-out;
+  animation: bounceIn 2s ease-in-out;
   z-index: 1000;
   backdrop-filter: blur(5px);
 }
@@ -245,6 +245,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 100vh;
+  border-bottom: 1px solid var(--col-off-white);
   background-color: var(--col-off-black);
 }
 
@@ -568,6 +569,144 @@ body {
 
 /* END OF HERO SECTION */
 
+/* Start of What we Do */
+
+.purpose {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  min-height: 80vh;
+  border-bottom: 0.5px solid var(--col-off-white);
+  background-image: url("../images/wedding-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.purpose-container {
+  width: 80%;
+  height: 80%;
+  background-color: rgba(255, 255, 255, 0.027);
+  backdrop-filter: blur(100px);
+  display: grid;
+  grid-template-rows: 0.4fr 1fr; /* Two rows: top auto height, bottom takes remaining space */
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.whatwedo {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.items {
+  margin: 5% 0 5% 0;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Adjusts item layout */
+  gap: 10px; /* Space between items */
+}
+
+.item {
+  text-align: center;
+}
+
+.item .img-container img {
+  width: 80px;
+  height: auto;
+}
+
+.title,
+.paragraph {
+  margin-top: 20px;
+}
+
+/* Responsiveness for what we do */
+
+/* Making the .purpose section responsive */
+@media (max-width: 1200px) {
+  .purpose {
+    min-height: 70vh; /* Reduce height for medium screens */
+  }
+
+  .purpose-container {
+    width: 90%; /* Allow for more margin on smaller screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .purpose {
+    min-height: 60vh; /* Further reduce height */
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .purpose-container {
+    height: auto; /* Allow height to adjust based on content */
+    width: 95%; /* Maximize width on smaller screens */
+  }
+
+  .whatwedo {
+    font-size: 20px; /* Adjust font size */
+  }
+}
+
+@media (max-width: 768px) {
+  .purpose {
+    min-height: 50vh; /* Even smaller height */
+    padding: 20px; /* Add padding for better spacing */
+  }
+
+  .items {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(150px, 1fr)
+    ); /* More compact item layout */
+  }
+
+  .whatwedo {
+    font-size: 20px; /* Further decrease font size */
+  }
+}
+
+@media (max-width: 576px) {
+  .purpose {
+    min-height: 40vh; /* Minimize height further */
+  }
+
+  .whatwedo {
+    font-size: 20px; /* Smallest font size for mobile */
+  }
+
+  .items {
+    margin: 2% 0; /* Reduce margins for smaller screens */
+  }
+
+  .item .img-container img {
+    width: 60px; /* Smaller images */
+  }
+}
+
+@media (max-width: 400px) {
+  .purpose {
+    min-height: 30vh; /* Set a minimum height for very small screens */
+  }
+
+  .whatwedo {
+    font-size: 20px; /* Small font for very small devices */
+  }
+}
+
+/* End of Responsiveness */
+
+/* End of What we Do */
+
+/* Start of services */
+
 .grid-container {
   background: linear-gradient(
     90deg,
@@ -577,7 +716,7 @@ body {
   );
   padding: 15px 9%;
   padding-bottom: 100px;
-  margin: 100vh 0 0 0;
+  border-bottom: 1px solid var(--col-off-black);
 }
 
 .grid-container .box-container {
@@ -715,6 +854,10 @@ p.skeleton-text {
   }
 }
 
+/* End of Services */
+
+/* Start of Footer */
+
 .footer-container {
   background: var(--col-off-black);
   display: grid;
@@ -808,3 +951,5 @@ p.skeleton-text {
   justify-items: center;
   gap: 10px;
 }
+
+/* End of Footer */
