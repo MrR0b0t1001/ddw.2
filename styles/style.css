@@ -30,11 +30,30 @@ body {
   padding: 20px 10%;
   display: flex;
   flex-grow: 1;
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
   justify-content: space-between;
-  z-index: 100;
   animation: bounceIn 3s ease-in-out;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: translateY(-100%); /* Start above the screen */
+    opacity: 0; /* Start hidden */
+  }
+  30% {
+    transform: translateY(30px); /* Move down a bit */
+    opacity: 1; /* Fully visible */
+  }
+  50% {
+    transform: translateY(-15px); /* Move up a bit */
+  }
+  70% {
+    transform: translateY(10px); /* Move down slightly */
+  }
+  100% {
+    transform: translateY(0); /* Settle in place */
+  }
 }
 
 .navbar {
@@ -95,18 +114,12 @@ body {
 
 .dropbtn {
   background: transparent;
-  color: var(--col-off-white);
   margin-left: 35px;
   font-size: 18px;
   border: none;
   cursor: pointer;
   transition: transform 0.5s;
-}
-
-.navbar > a,
-.dropbtn,
-.Logo {
-  animation: bounceIn 2.5s ease-in-out;
+  color: var(--col-off-white);
 }
 
 .dropdown:hover .dropbtn {
@@ -122,7 +135,7 @@ body {
   width: 80px;
   background: var(--col-off-white);
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 1100;
   border-radius: 8px;
 }
 
@@ -167,6 +180,12 @@ body {
   display: flex;
 }
 
+.navbar > a,
+.dropbtn.b,
+.Logo {
+  animation: bounceIn 2.5s ease-in-out;
+}
+
 /* Making navbar responsive */
 .sidebar {
   position: fixed;
@@ -174,7 +193,7 @@ body {
   right: 0;
   height: 100vh;
   width: 250px;
-  z-index: 999;
+  z-index: 1000;
   display: none;
   background: var(--col-off-white);
   flex-direction: column;
@@ -196,7 +215,7 @@ body {
   display: none;
 }
 
-@media screen and (max-width: 983px) {
+@media screen and (max-width: 999px) {
   .hideOnMobile {
     display: none;
   }
@@ -204,11 +223,19 @@ body {
   .ham-btn {
     display: inline-block;
   }
+
+  .dropbtn {
+    color: var(--col-off-black);
+  }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 399px) {
   .sidebar {
     width: 100%;
+  }
+
+  .dropbtn {
+    color: var(--col-off-black);
   }
 }
 
@@ -262,7 +289,7 @@ body {
   opacity: 1;
   animation:
     fadeIn 2.5s ease-in-out,
-    changeImage 18s ease-in-out infinite alternate;
+    changeImage 25s ease-in-out infinite alternate;
 }
 
 /* Middle container for the typed-text with buttons */
@@ -393,7 +420,7 @@ body {
   opacity: 1;
   animation:
     fadeIn 2.5s ease-in-out,
-    changeImage 18s ease-in-out infinite alternate;
+    changeImage 25s ease-in-out infinite alternate;
 }
 
 @keyframes changeImage {
