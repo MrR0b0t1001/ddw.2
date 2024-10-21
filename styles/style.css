@@ -262,7 +262,7 @@ body {
   opacity: 1;
   animation:
     fadeIn 2.5s ease-in-out,
-    changeImage 25s ease-in-out infinite alternate;
+    changeImage 18s ease-in-out infinite alternate;
 }
 
 /* Middle container for the typed-text with buttons */
@@ -393,7 +393,7 @@ body {
   opacity: 1;
   animation:
     fadeIn 2.5s ease-in-out,
-    changeImage 25s ease-in-out infinite alternate;
+    changeImage 18s ease-in-out infinite alternate;
 }
 
 @keyframes changeImage {
