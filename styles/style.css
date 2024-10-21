@@ -55,18 +55,6 @@ body {
   font-weight: 600;
 }
 
-@keyframes slideLeft {
-  1% {
-    transform: translate(-500%, 0);
-  }
-  70% {
-    transform: translate(100%, 0);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
 .navbar a {
   position: relative;
   font-size: 18px;
