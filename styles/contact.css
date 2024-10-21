@@ -34,7 +34,7 @@ body {
   display: flex;
   flex-grow: 1;
   justify-content: space-between;
-  z-index: 100;
+  z-index: 1000;
   animation: bounceIn 3s ease-in-out;
   backdrop-filter: blur(5px);
 }
@@ -130,7 +130,7 @@ body {
   width: 80px;
   background: var(--col-off-white);
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 1100;
   border-radius: 8px;
 }
 
@@ -182,7 +182,7 @@ body {
   right: 0;
   height: 100vh;
   width: 250px;
-  z-index: 999;
+  z-index: 1000;
   display: none;
   background: var(--col-off-white);
   flex-direction: column;
@@ -241,7 +241,7 @@ body {
   overflow: hidden;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  z-index: 999;
+  z-index: 900;
 }
 
 .contact {
@@ -285,7 +285,7 @@ body {
   border-radius: 50%;
   font-size: 20px;
   color: var(--col-off-black);
-  z-index: 1;
+  z-index: 100;
   overflow: hidden;
   transition: 0.5s;
   margin: 10px 0 0 10px;

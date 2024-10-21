@@ -53,7 +53,6 @@ body {
   color: var(--col-off-white);
   text-decoration: none;
   font-weight: 600;
-  animation: slideLeft 3s ease-in-out;
 }
 
 @keyframes slideLeft {
@@ -114,6 +113,12 @@ body {
   border: none;
   cursor: pointer;
   transition: transform 0.5s;
+}
+
+.navbar > a,
+.dropbtn,
+.Logo {
+  animation: bounceIn 2.5s ease-in-out;
 }
 
 .dropdown:hover .dropbtn {
@@ -233,7 +238,7 @@ body {
   0% {
     opacity: 0;
   }
-  100% {
+  60% {
     opacity: 1;
   }
 }
