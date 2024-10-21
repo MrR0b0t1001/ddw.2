@@ -416,16 +416,16 @@ body {
     background-image: url("../images/wedding-photo4.jpg");
   }
   40% {
-    background-image: url("../images/wedding-photo5.jpg");
-  }
-  60% {
     background-image: url("../images/wedding-photo3.jpg");
   }
-  80% {
+  60% {
     background-image: url("../images/wedding-photo4.jpg");
   }
+  80% {
+    background-image: url("../images/wedding-photo3.jpg");
+  }
   100% {
-    background-image: url("../images/wedding-photo5.jpg");
+    background-image: url("../images/wedding-photo4.jpg");
   }
 }
 
