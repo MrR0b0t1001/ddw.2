@@ -1,4 +1,4 @@
-const words = ["Union", "Wedding", "Special Day", "Event"];
+const words = ["Union", "Event", "Special Day", "Wedding"];
 let currentIndex = 0;
 const textElement = document.querySelector(".text-4");
 

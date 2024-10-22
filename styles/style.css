@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Verdana;
+  font-family: "Playfair Display", Arial;
 }
 
 :root {
@@ -246,7 +248,6 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 100vh;
-  border-bottom: 1px solid var(--col-off-white);
   background-color: var(--col-off-black);
 }
 
@@ -255,8 +256,8 @@ body {
   0% {
     opacity: 0;
   }
-  80% {
-    opacity: 1;
+  60% {
+    opacity: 1; /* Fully visible */
   }
 }
 
@@ -290,8 +291,8 @@ body {
   background-size: cover;
   opacity: 1;
   animation:
-    fadeIn 2.5s ease-in-out,
-    changeImage 25s ease-in-out infinite alternate;
+    fadeIn 3s ease-in-out,
+    changeImage 30s ease-in-out infinite alternate;
 }
 
 /* Middle container for the typed-text with buttons */
@@ -313,19 +314,11 @@ body {
   font-weight: 700;
   line-height: 1.2;
   color: var(--col-off-white);
+  overflow: hidden;
 }
 
 .text {
   position: relative;
-}
-
-.text-1 {
-}
-
-.text-2 {
-}
-
-.text-3 {
 }
 
 .text-4::before {
@@ -335,8 +328,8 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  border-left: 3px solid var(--col-off-white);
-  background-color: var(--col-off-black);
+  border-left: 2px solid var(--col-off-white);
+  background: var(--col-off-black);
   animation: typewriter 5s steps(20) infinite;
 }
 
@@ -410,6 +403,8 @@ body {
 
 .btn-box a:hover {
   color: var(--col-off-white);
+  font-weight: 700;
+  font-size: 21px;
 }
 
 .image-container2 {
@@ -421,8 +416,8 @@ body {
   background-repeat: no-repeat;
   opacity: 1;
   animation:
-    fadeIn 2.5s ease-in-out,
-    changeImage 25s ease-in-out infinite alternate;
+    fadeIn 3s ease-in-out,
+    changeImage 30s ease-in-out infinite alternate;
 }
 
 @keyframes changeImage {
@@ -483,7 +478,7 @@ body {
   }
 
   .btn-box {
-    width: 280px;
+    width: 300px;
     height: 50px;
   }
 
@@ -504,13 +499,13 @@ body {
   }
 
   .btn-box {
-    width: 260px;
+    width: 280px;
     height: 48px;
   }
 
   .btn-box a {
     font-size: 17px;
-    padding: 10px 15px;
+    padding: 8px 12px;
     width: 130px;
     transition: transform 0.3s ease;
   }
@@ -573,12 +568,12 @@ body {
 /* Start of What we Do */
 
 .purpose {
+  margin-top: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: auto;
-  min-height: 80vh;
-  border-bottom: 0.5px solid var(--col-off-white);
+  min-height: 100vh;
   background-image: url("../images/wedding-bg.jpg");
   background-position: center;
   background-size: cover;
@@ -586,14 +581,14 @@ body {
 }
 
 .purpose-container {
-  width: 80%;
-  height: 80%;
+  width: 65%;
+  height: 90%;
   background-color: rgba(255, 255, 255, 0.027);
-  -webkit-backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(100px);
   backdrop-filter: blur(100px);
   display: grid;
-  grid-template-rows: 0.4fr 1fr; /* Two rows: top auto height, bottom takes remaining space */
-  border-radius: 20px;
+  grid-template-rows: 0.3fr 1fr; /* Two rows: top auto height, bottom takes remaining space */
+  border-radius: 30px;
   overflow: hidden;
 }
 
@@ -619,13 +614,16 @@ body {
 }
 
 .item .img-container img {
-  width: 80px;
+  width: 60px;
   height: auto;
+  border-radius: 30%;
 }
 
 .title,
-.paragraph {
+.paragraph,
+.whatwedo {
   margin-top: 20px;
+  color: var(--col-off-white);
 }
 
 /* Responsiveness for what we do */
@@ -685,21 +683,11 @@ body {
   }
 
   .items {
-    margin: 2% 0; /* Reduce margins for smaller screens */
+    margin: 5% 0; /* Reduce margins for smaller screens */
   }
 
   .item .img-container img {
     width: 60px; /* Smaller images */
-  }
-}
-
-@media (max-width: 400px) {
-  .purpose {
-    min-height: 30vh; /* Set a minimum height for very small screens */
-  }
-
-  .whatwedo {
-    font-size: 20px; /* Small font for very small devices */
   }
 }
 
