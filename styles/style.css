@@ -10,6 +10,7 @@
 :root {
   --col-off-black: hsl(30, 10%, 10%);
   --col-off-white: hsl(18, 100%, 97%);
+  --col-off-tamarind: rgba(166, 158, 148, 1);
   --col-gray: rgba(150, 150, 150, 1);
   --col-off-pink: hsl(313, 88%, 92%);
   --accent-cols: rgba(255, 228, 230, 1);
@@ -700,10 +701,10 @@ body {
 .grid-container {
   background: linear-gradient(
     90deg,
-    var(--col-off-black),
-    var(--col-gray),
+    var(--col-off-tamarind),
     var(--col-off-white)
   );
+
   padding: 15px 9%;
   padding-bottom: 100px;
   border-bottom: 1px solid var(--col-off-black);
