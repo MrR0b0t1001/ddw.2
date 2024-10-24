@@ -20,14 +20,20 @@
   --col-gray: rgba(150, 150, 150, 1);
 }
 
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: grid;
+}
+
 body {
   height: 100vh;
   background: linear-gradient(
     90deg,
-    var(--col-off-champagne),
-    var(--col-off-morning-fog),
-    var(--col-off-blushing),
-    var(--col-off-tradewind)
+    var(--col-off-tamarind),
+    var(--col-off-white)
   );
 }
 
@@ -147,29 +153,28 @@ body {
 /* Start of services cards */
 
 .grid-container {
-  background: linear-gradient(
-    90deg,
-    var(--col-off-tamarind),
-    var(--col-off-white)
-  );
   padding: 15px 9%;
   padding-bottom: 100px;
-  border-bottom: 1px solid var(--col-off-black);
 }
 
 .grid-container .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
 }
 
 .grid-container .box-container .box {
+  min-width: 280px; /* Set a minimum width */
+  min-height: auto; /* Set a minimum height */
+  max-width: 280px; /* Set a minimum width */
+  max-height: 600px; /* Set a minimum height */
+
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   background: var(--col-off-white);
   text-align: center;
   padding: 30px 20px;
-  margin: 0 40px 60px 0;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease,
