@@ -16,8 +16,42 @@
 
     <div class="navbar">
       <ul class="navbar-nav">
-        <li class="nav-item">
+        <li class="nav-item businesses" onclick="displayBusinesses()">
           <a href="#" class="nav-link">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              style="fill: rgba(0, 0, 0, 1); transform:; msfilter:"
+            >
+              <path
+                d="M21.999 8a.997.997 0 0 0-.143-.515L19.147 2.97A2.01 2.01 0 0 0 17.433 2H6.565c-.698 0-1.355.372-1.714.971L2.142 7.485A.997.997 0 0 0 1.999 8c0 1.005.386 1.914 1 2.618V20a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-5h4v5a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-9.382c.614-.704 1-1.613 1-2.618zm-2.016.251A2.002 2.002 0 0 1 17.999 10c-1.103 0-2-.897-2-2 0-.068-.025-.128-.039-.192l.02-.004L15.219 4h2.214l2.55 4.251zm-9.977-.186L10.818 4h2.361l.813 4.065C13.957 9.138 13.079 10 11.999 10s-1.958-.862-1.993-1.935zM6.565 4h2.214l-.76 3.804.02.004c-.015.064-.04.124-.04.192 0 1.103-.897 2-2 2a2.002 2.002 0 0 1-1.984-1.749L6.565 4zm3.434 12h-4v-3h4v3z"
+              ></path>
+            </svg>
+            <span class="link-text">Businesses</span>
+          </a>
+        </li>
+
+        <li class="nav-item florists">
+          <a href="#" class="nav-link" onclick="selectNavbar()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              style="fill: rgba(0, 0, 0, 1); transform:; msfilter:"
+            >
+              <path
+                d="M10.84 21.871 12 22a10.221 10.221 0 0 0-9.013-8.891L2 13l.021.173a10.001 10.001 0 0 0 8.819 8.698zm11.139-8.698L22 13l-.987.109c-4.7.523-8.427 4.2-9.013 8.891l1.16-.129a10.001 10.001 0 0 0 8.819-8.698zM18.063 5.5a2.5 2.5 0 0 0-3.415-.915c-.062.035-.111.081-.168.121.005-.069.02-.136.02-.206a2.5 2.5 0 1 0-5 0c0 .07.015.137.021.206-.057-.04-.107-.086-.168-.121a2.5 2.5 0 0 0-2.5 4.33c.061.035.126.056.188.085-.062.029-.127.05-.188.085a2.5 2.5 0 0 0 2.5 4.33c.062-.035.111-.081.168-.121-.006.069-.021.136-.021.206a2.5 2.5 0 1 0 5 0c0-.07-.015-.137-.021-.206.057.04.106.086.168.121a2.5 2.5 0 0 0 2.5-4.33c-.061-.035-.126-.056-.188-.085.063-.029.127-.05.188-.085a2.5 2.5 0 0 0 .916-3.415zM12 12a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+              ></path>
+            </svg>
+            <span class="link-text">Florists</span>
+          </a>
+        </li>
+
+        <li class="nav-item hairdressers">
+          <a href="#" onclick="selectNavbar()" class="nav-link">
             <svg
               width="32px"
               height="32px"
@@ -47,8 +81,8 @@
             <span class="link-text">Hairdressers</span>
           </a>
         </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link"
+        <li class="nav-item clothing">
+          <a href="#" onclick="selectNavbar()" class="nav-link"
             ><svg
               width="20px"
               height="32px"
@@ -94,8 +128,8 @@
           </a>
         </li>
 
-        <li class="nav-item">
-          <a href="#" class="nav-link"
+        <li class="nav-item djs">
+          <a href="#" onclick="selectNavbar()" class="nav-link"
             ><svg
               height="32px"
               width="32px"
@@ -135,8 +169,8 @@
           </a>
         </li>
 
-        <li class="nav-item">
-          <a href="#" class="nav-link"
+        <li class="nav-item catering">
+          <a href="#" onclick="selectNavbar()" class="nav-link"
             ><svg
               fill="#000000"
               width="32px"
@@ -174,8 +208,8 @@
           </a>
         </li>
 
-        <li class="nav-item">
-          <a href="#" class="nav-link">
+        <li class="nav-item venues">
+          <a href="#" onclick="selectNavbar()" class="nav-link">
             <svg
               fill="#000000"
               height="32px"
@@ -302,7 +336,7 @@
           >
         </div>
 
-        <div class="box vendor-clothing hidden">
+        <div class="box vendor clothing hidden">
           <img src="../images/men-attire.jpg" alt="" class="skeleton" />
           <h3 class="skeleton skeleton-text"></h3>
           <p class="skeleton skeleton-text"></p>
@@ -323,7 +357,7 @@
           <a href="#" class="actual-text btn">See Business #1</a>
         </div>
 
-        <div class="box vendor-djs hidden">
+        <div class="box vendor djs hidden">
           <img src="../images/dj.jpg" alt="" class="skeleton" />
           <h3 class="skeleton skeleton-text"></h3>
           <p class="skeleton skeleton-text"></p>
@@ -344,7 +378,28 @@
           <a href="#" class="actual-text btn">See DJ #1</a>
         </div>
 
-        <div class="box vendor-venues hidden">
+        <div class="box vendor florists hidden">
+          <img src="../images/florist.jpg" alt="" class="skeleton" />
+          <h3 class="skeleton skeleton-text"></h3>
+          <p class="skeleton skeleton-text"></p>
+
+          <h3 class="actual-text partner">Florist #1</h3>
+          <p class="actual-text partner">Professional Flower Deco</p>
+          <p class="actual-text partner">Price Range: 1000$-10000$</p>
+          <p class="actual-text partner">Location: Athens 12344</p>
+          <div class="social-links">
+            <span class="partner">See our work: </span>
+            <div class="home-sci">
+              <a href="#"><i class="bx bxl-facebook"></i></a>
+              <a href="#"><i class="bx bxl-twitter"></i></a>
+              <a href="#"><i class="bx bxl-instagram"></i></a>
+              <a href="#"><i class="bx bxl-tiktok"></i></a>
+            </div>
+          </div>
+          <a href="#" class="actual-text btn">See Florist #1</a>
+        </div>
+
+        <div class="box vendor venues hidden">
           <img src="../images/venue2.jpg" alt="" class="skeleton" />
           <h3 class="skeleton skeleton-text"></h3>
           <p class="skeleton skeleton-text"></p>
@@ -365,7 +420,7 @@
           <a href="#" class="actual-text btn">See Venue #1</a>
         </div>
 
-        <div class="box vendor-catering hidden">
+        <div class="box vendor catering hidden">
           <img src="../images/catering.jpg" alt="" class="skeleton" />
           <h3 class="skeleton skeleton-text"></h3>
           <p class="skeleton skeleton-text"></p>
@@ -386,7 +441,7 @@
           <a href="#" class="actual-text btn">See Catering #1</a>
         </div>
 
-        <div class="box vendor-catering hidden">
+        <div class="box vendor catering hidden">
           <img src="../images/catering.jpg" alt="" class="skeleton" />
           <h3 class="skeleton skeleton-text"></h3>
           <p class="skeleton skeleton-text"></p>
@@ -407,7 +462,7 @@
           <a href="#" class="actual-text btn">See Catering #1</a>
         </div>
 
-        <div class="box vendor-catering hidden">
+        <div class="box vendor catering hidden">
           <img src="../images/catering.jpg" alt="" class="skeleton" />
           <h3 class="skeleton skeleton-text"></h3>
           <p class="skeleton skeleton-text"></p>
@@ -428,7 +483,7 @@
           <a href="#" class="actual-text btn">See Catering #1</a>
         </div>
 
-        <div class="box vendor-catering hidden">
+        <div class="box vendor catering hidden">
           <img src="../images/catering.jpg" alt="" class="skeleton" />
           <h3 class="skeleton skeleton-text"></h3>
           <p class="skeleton skeleton-text"></p>
@@ -449,7 +504,7 @@
           <a href="#" class="actual-text btn">See Catering #1</a>
         </div>
 
-        <div class="box vendor-hairdressers hidden">
+        <div class="box vendor hairdressers hidden">
           <img src="../images/hairdresser.jpg" alt="" class="skeleton" />
           <h3 class="skeleton skeleton-text"></h3>
           <p class="skeleton skeleton-text"></p>
@@ -470,7 +525,7 @@
           <a href="#" class="actual-text btn">See Catering #1</a>
         </div>
 
-        <div class="box vendor-hairdressers hidden">
+        <div class="box vendor hairdressers hidden">
           <img src="../images/hairdresser.jpg" alt="" class="skeleton" />
           <h3 class="skeleton skeleton-text"></h3>
           <p class="skeleton skeleton-text"></p>
@@ -496,5 +551,7 @@
     <!-- End of Services Cards -->
     <script src="../assets/hasLoaded.js"></script>
     <script src="../assets/display-cards.js"></script>
+    <script src="../assets/navbar-display.js"></script>
+    <script src="../assets/businesses-display.js"></script>
   </body>
 </html>
