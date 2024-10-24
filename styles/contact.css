@@ -304,7 +304,7 @@ body {
   color: var(--col-off-black);
   z-index: 100;
   overflow: hidden;
-  transition: 0.5s;
+  transition: color 0.5s;
   margin: 10px 0 0 10px;
 }
 
@@ -317,7 +317,7 @@ body {
   height: 100%;
   background: var(--col-off-black);
   z-index: -1;
-  transition: 0.5s;
+  transition: width 0.5s;
 }
 
 .home-sci a:hover::before {

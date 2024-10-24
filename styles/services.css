@@ -10,13 +10,25 @@
 :root {
   --col-off-black: hsl(30, 10%, 10%);
   --col-off-tamarind: rgba(166, 158, 148, 1);
+  --col-off-blushing: rgba(235, 190, 178, 1);
+  --col-off-champagne: rgba(243, 219, 182, 1);
+  --col-off-grecian-ivory: rgba(225, 215, 187, 1);
+  --col-off-pearl-gray: rgba(202, 202, 196, 1);
+  --col-off-tradewind: rgba(191, 213, 211, 1);
+  --col-off-morning-fog: rgba(167, 177, 183, 1);
   --col-off-white: hsl(18, 100%, 97%);
   --col-gray: rgba(150, 150, 150, 1);
 }
 
 body {
   height: 100vh;
-  background: var(--col-off-black);
+  background: linear-gradient(
+    90deg,
+    var(--col-off-champagne),
+    var(--col-off-morning-fog),
+    var(--col-off-blushing),
+    var(--col-off-tradewind)
+  );
 }
 
 /* General Navbar Styling */
@@ -281,3 +293,55 @@ p.skeleton-text {
 }
 
 /* End of services cards */
+.social-links {
+  margin-top: 20px;
+}
+
+.home-sci {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-sci a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  text-decoration: none;
+  font-size: 20px;
+  border: 2px solid var(--col-off-black);
+  background: var(--col-off-black);
+  color: var(--col-off-white);
+  border-radius: 50%;
+  z-index: 100;
+  overflow: hidden;
+  transition: color 0.5s;
+  margin: 10px 0 0 10px;
+}
+
+.home-sci a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--col-off-white);
+  z-index: -1;
+  transition: width 0.5s;
+}
+
+.home-sci a:hover::before {
+  width: 100%;
+}
+
+.home-sci a:hover {
+  color: var(--col-off-black);
+}
+.partner {
+  font-weight: 600;
+}
