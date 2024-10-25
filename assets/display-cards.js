@@ -3,6 +3,10 @@ const selectBusiness = () => {
   const businessSelectors = {
     ".business.florists": ".vendor.florists",
     ".business.djs": ".vendor.djs",
+    ".business.transportation": ".vendor.transportation",
+    ".business.musicians": ".vendor.musicians",
+    ".business.photographers": ".vendor.photographers",
+    ".business.videographers": ".vendor.videographers",
     ".business.catering": ".vendor.catering",
     ".business.venues": ".vendor.venues",
     ".business.hairdressers": ".vendor.hairdressers",

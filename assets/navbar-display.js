@@ -1,7 +1,11 @@
 const selectNavbar = () => {
   const navbarBusinesses = {
     ".nav-item.florists": ".vendor.florists",
+    ".nav-item.photographers": ".vendor.photographers",
+    ".nav-item.videographers": ".vendor.videographers",
     ".nav-item.djs": ".vendor.djs",
+    ".nav-item.transportation": ".vendor.transportation",
+    ".nav-item.musicians": ".vendor.musicians",
     ".nav-item.catering": ".vendor.catering",
     ".nav-item.venues": ".vendor.venues",
     ".nav-item.hairdressers": ".vendor.hairdressers",

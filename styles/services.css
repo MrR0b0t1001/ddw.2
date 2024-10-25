@@ -29,12 +29,35 @@
 }
 
 body {
-  height: 100vh;
+  height: 200vh;
   background: linear-gradient(
     90deg,
     var(--col-off-tamarind),
     var(--col-off-white)
   );
+}
+
+.navbar::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.navbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    120deg,
+    var(--col-off-morning-fog),
+    var(--col-off-pearl-gray)
+  );
+  border-radius: 10px;
+}
+
+.navbar::-webkit-scrollbar-track {
+  background: linear-gradient(
+    90deg,
+    var(--col-off-white),
+    var(--col-off-grecian-ivory)
+  );
+  border-radius: 10px;
 }
 
 /* General Navbar Styling */
@@ -44,7 +67,7 @@ body {
 
   position: fixed;
   width: 5rem;
-  height: 100vh;
+  height: 200vh;
   transition: width 0.5s ease-in-out;
 
   z-index: 200;
@@ -66,8 +89,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  margin-right: 10px;
   height: 5rem;
   text-decoration: none;
+  gap: 10px;
 }
 
 .link-text {
@@ -77,7 +102,7 @@ body {
 }
 
 .navbar:hover {
-  width: 16rem;
+  width: 20rem;
 }
 
 .navbar:hover .link-text {
@@ -101,6 +126,7 @@ body {
     width: 5rem;
     height: 100vh;
     overflow-y: auto; /* Enable scrolling on larger screens as well */
+    overflow-x: hidden;
   }
 
   .navbar:hover {
