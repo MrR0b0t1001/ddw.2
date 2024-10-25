@@ -47,7 +47,7 @@ body {
   height: 100vh;
   transition: width 0.5s ease-in-out;
 
-  z-index: 100;
+  z-index: 200;
 }
 
 .navbar-nav {

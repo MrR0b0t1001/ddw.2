@@ -14,6 +14,12 @@ const selectNavbar = () => {
       navLink.addEventListener("click", () => {
         document.querySelectorAll(".business").forEach((businessCard) => {
           businessCard.classList.add("hidden");
+          businessCard.classList.remove("visible");
+        });
+
+        document.querySelectorAll(".vendor").forEach((vendor) => {
+          vendor.classList.remove("visible");
+          vendor.classList.add("hidden");
         });
 
         document.querySelectorAll(businessType).forEach((vendorCard) => {
