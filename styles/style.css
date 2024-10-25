@@ -22,6 +22,30 @@
   --accent-cols: rgba(255, 228, 230, 1);
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: linear-gradient(
+    90deg,
+    var(--col-off-white),
+    var(--col-off-grecian-ivory)
+  );
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    120deg,
+    var(--col-off-morning-fog),
+    var(--col-off-pearl-gray)
+  );
+  border-radius: 10px;
+}
+
 html {
   scroll-behavior: smooth;
 }
