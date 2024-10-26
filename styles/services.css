@@ -31,9 +31,10 @@
 body {
   height: 200vh;
   background: linear-gradient(
-    90deg,
-    var(--col-off-tamarind),
-    var(--col-off-white)
+    45deg,
+    var(--col-off-blushing),
+    var(--col-off-pearl-gray),
+    var(--col-off-champagne)
   );
 }
 

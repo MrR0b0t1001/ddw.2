@@ -20,6 +20,7 @@
   --col-gray: rgba(150, 150, 150, 1);
   --col-off-pink: hsl(313, 88%, 92%);
   --accent-cols: rgba(255, 228, 230, 1);
+  --col-home-bg: rgba(242, 242, 242, 1);
 }
 
 ::-webkit-scrollbar {
@@ -173,6 +174,10 @@ body {
   border-radius: 8px;
 }
 
+.sidebar .dropdown-content {
+  background: var(--col-off-tamarind);
+}
+
 .dropdown-content a {
   position: relative;
   color: var(--col-off-black);
@@ -229,7 +234,7 @@ body {
   width: 250px;
   z-index: 1000;
   display: none;
-  background: var(--col-off-white);
+  background: var(--col-off-tamarind);
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
@@ -279,7 +284,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 100vh;
-  background-color: var(--col-off-black);
+  background: var(--col-off-black);
 }
 
 /* Fade-in effect keyframes */
@@ -333,7 +338,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--col-off-black);
   padding: 30px;
   border-radius: 10px;
   overflow: hidden;
@@ -604,11 +608,11 @@ body {
   align-items: center;
   height: auto;
   min-height: 100vh;
-  background: var(--col-off-black);
-  background-image: url("../images/wedding-bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background: linear-gradient(
+    135deg,
+    var(--col-off-black),
+    var(--col-off-grecian-ivory)
+  );
 }
 
 .purpose-container {
@@ -730,11 +734,11 @@ body {
 
 .grid-container {
   background: linear-gradient(
-    90deg,
-    var(--col-off-tamarind),
-    var(--col-off-white)
+    45deg,
+    var(--col-off-blushing),
+    var(--col-off-pearl-gray),
+    var(--col-off-champagne)
   );
-
   padding: 15px 9%;
   padding-bottom: 100px;
   border-bottom: 1px solid var(--col-off-black);
