@@ -109,24 +109,59 @@
         </div>
         <div class="submit-form">
           <h4 class="third-text">Contact Us</h4>
-          <form action="" autocomplete="off">
+          <form
+            action="https://api.web3forms.com/submit"
+            action=""
+            method="POST"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="e39ab251-9bb3-441d-804b-2a7781a41c15"
+            />
             <div class="input-box">
-              <input type="text" class="input" id="name" required />
+              <input
+                type="text"
+                class="input"
+                id="name"
+                name="first_name"
+                required
+              />
               <label for="name">Name</label>
             </div>
 
             <div class="input-box">
-              <input type="email" class="input" id="email" required />
+              <input
+                type="email"
+                class="input"
+                id="email"
+                name="email"
+                autocomplete="off"
+                required
+              />
               <label for="email">Email</label>
             </div>
 
             <div class="input-box">
-              <input type="tel" class="input" id="phone" required />
+              <input
+                type="tel"
+                class="input"
+                id="phone"
+                name="phone"
+                autocomplete="off"
+                required
+              />
               <label for="phone">Phone</label>
             </div>
 
             <div class="input-box">
-              <textarea class="input" id="message" required></textarea>
+              <textarea
+                class="input"
+                id="message"
+                name="message"
+                autocomplete="off"
+                required
+              ></textarea>
               <label for="message">Message</label>
             </div>
             <div class="button-container">
